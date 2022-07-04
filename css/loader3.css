@@ -1,0 +1,48 @@
+/* CSS for animated bouncing loader. */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Loader circles */
+  .loader > span {
+
+    background: #fc0000;
+    border-radius: 50%;
+    margin: 5rem 0.5rem;
+    animation: bouncingLoader 0.6s infinite alternate;
+  }
+  
+  .loader > span:nth-child(2) {
+    animation-delay: 0.2s;
+    background: #0d09ff;
+  }
+  
+  .loader > span:nth-child(3) {
+    animation-delay: 0.4s;
+    background: #ff038e;
+  }
+  
+  /* Define the animation called bouncingLoader. */
+  @keyframes bouncingLoader {
+    from {
+      width: 0.1rem;
+      height: 0.1rem;
+      opacity: 2;
+      transform: translate3d(0);
+    }
+    to {
+      width: 1rem;
+      height: 1rem;
+      opacity: 0.1;
+      transform: translate3d(0, -1rem, 0);
+    }
+  }
+  
+  /* OPTIONAL: Styles for the demo. */
+  body {
+    background: #dbd9e7;
+    padding: 2rem;
+  }
+  
